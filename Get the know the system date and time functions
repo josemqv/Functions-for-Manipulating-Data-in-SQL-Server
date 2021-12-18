@@ -1,0 +1,10 @@
+SELECT 
+	GETDATE() AS CurrentDate;
+  
+  
+  SELECT 
+	SYSUTCDATETIME() AS UTC_HighPrecision,
+	GETUTCDATE() AS UTC_LowPrecision;
+  
+  SELECT 
+	SYSDATETIMEOFFSET() AS Timezone;
