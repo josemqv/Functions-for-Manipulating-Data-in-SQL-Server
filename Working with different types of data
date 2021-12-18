@@ -1,0 +1,25 @@
+SELECT 
+	company, 
+	company_location, 
+	bean_origin, 
+	cocoa_percent, 
+	rating
+FROM ratings
+-- Location should be Belgium and the rating should exceed 3.5
+WHERE company_location = 'Belgium	'
+	AND rating > 3.5;
+  
+  
+  SELECT 
+	first_name,
+	last_name,
+	birthdate,
+	gender,
+	email,
+	country,
+	total_votes
+FROM voters
+-- Birthdate > 1990-01-01, total_votes > 100 but < 200
+WHERE birthdate > '1990-01-01'
+  AND total_votes > 100
+  AND total_votes < 200;
