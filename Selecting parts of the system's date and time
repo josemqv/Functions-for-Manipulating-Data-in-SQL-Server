@@ -1,0 +1,7 @@
+SELECT 
+	CONVERT(VARCHAR(24), SYSDATETIME(), 107) AS HighPrecision,
+	CONVERT(VARCHAR(24), GETDATE(), 102) AS LowPrecision;
+  
+  SELECT 
+	CAST(SYSUTCDATETIME() AS time) AS HighPrecision,
+	CAST(GETUTCDATE() AS time) AS LowPrecision;
