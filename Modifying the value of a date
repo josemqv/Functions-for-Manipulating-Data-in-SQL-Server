@@ -1,0 +1,18 @@
+SELECT 
+	first_name,
+	birthdate,
+    -- Add 18 years to the birthdate
+	DATEADD(YEAR, 18, birthdate) AS eighteenth_birthday
+  FROM voters;
+  
+  SELECT 
+	first_name,
+	first_vote_date,
+    -- Add 5 days to the first voting date
+	DATEADD(DAY, 5, first_vote_date) AS processing_vote_date
+  FROM voters;
+  
+  
+  SELECT
+	-- Subtract 476 days from the current date
+	DATEADD(DAY, -476, GETDATE()) AS date_476days_ago;
