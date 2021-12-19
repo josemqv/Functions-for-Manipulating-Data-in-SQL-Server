@@ -1,0 +1,12 @@
+SELECT
+	first_name,
+	birthdate,
+	first_vote_date,
+    -- Select the diff between the 18th birthday and first vote
+	DATEDIFF(YEAR, DATEADD(YEAR, 18, birthdate), first_vote_date) AS adult_years_until_vote
+FROM voters;
+
+
+SELECT 
+	-- Get the difference in weeks from 2019-01-01 until now
+	DATEDIFF(WEEK, '2019-01-01', GETDATE()) AS weeks_passed;
