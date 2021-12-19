@@ -1,0 +1,23 @@
+DECLARE @date1 NVARCHAR(20) = '2018-30-12';
+
+-- Set the date format and check if the variable is a date
+SET DATEFORMAT ydm;
+SELECT ISDATE(@date1) AS result;
+
+DECLARE @date1 NVARCHAR(20) = '15/2019/4';
+
+-- Set the date format and check if the variable is a date
+SET DATEFORMAT dym;
+SELECT ISDATE(@date1) AS result;
+
+DECLARE @date1 NVARCHAR(20) = '10.13.2019';
+
+-- Set the date format and check if the variable is a date
+SET DATEFORMAT mdy;
+SELECT ISDATE(@date1) AS result;
+
+DECLARE @date1 NVARCHAR(20) = '18.4.2019';
+
+-- Set the date format and check if the variable is a date
+SET DATEFORMAT dmy;
+SELECT ISDATE(@date1) AS result;
