@@ -1,0 +1,32 @@
+SELECT 
+	first_name,
+	last_name,
+	email 
+FROM voters
+-- Look for first names that contain "rr" in the middle
+WHERE PATINDEX('%rr%', first_name) > 0;
+
+SELECT 
+	first_name,
+	last_name,
+	email 
+FROM voters
+-- Look for first names that start with C and the 3rd letter is r
+WHERE PATINDEX('C_r%', first_name) > 0;
+
+SELECT 
+	first_name,
+	last_name,
+	email 
+FROM voters
+-- Look for first names that have an "a" followed by 0 or more letters and then have a "w"
+WHERE PATINDEX('%a%w%', first_name) > 0;
+
+
+SELECT 
+	first_name,
+	last_name,
+	email 
+FROM voters
+-- Look for first names that contain one of the letters: "x", "w", "q"
+WHERE PATINDEX('%[xwq]%', first_name) > 0;
