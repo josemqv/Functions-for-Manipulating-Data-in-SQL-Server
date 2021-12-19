@@ -1,0 +1,25 @@
+SELECT 
+	first_name,
+	last_name,
+	first_vote_date,
+    -- Select the name of the month of the first vote
+	DATENAME(MONTH, first_vote_date) AS first_vote_month
+FROM voters;
+
+
+SELECT 
+	first_name,
+	last_name,
+	first_vote_date,
+    -- Select the number of the day within the year
+	DATENAME(DAYOFYEAR, first_vote_date) AS first_vote_dayofyear
+FROM voters;
+
+
+SELECT 
+	first_name,
+	last_name,
+	first_vote_date,
+    -- Select day of the week from the first vote date
+	DATENAME(weekday, first_vote_date) AS first_vote_dayofweek
+FROM voters;
